@@ -1,4 +1,4 @@
-﻿# Name: Autologon
+﻿# Name: Autologon.ps1
 # Authors: Jörgen Nilsson
 # ccmexec.com
 
@@ -9,8 +9,18 @@ Param(
     [Parameter(Mandatory=$True)]
     [string]$Password
   )
-# Logon domain
+# Set values
+$Version="1"
+$RegKeyName = "CCMEXECOSD"
+$FullRegKeyName = "HKLM:\SOFTWARE\" + $regkeyname 
 $Domain="demiranda"
+
+# Create Registry key 
+New-Item -Path $FullRegKeyName -type Directory -ErrorAction SilentlyContinue
+
+# Set registry values to be used later
+new-itemproperty $FullRegKeyName -Name "Kiosk Version" -Value $Version -Type STRING -Force -ErrorAction SilentlyContinue | Out-Null
+new-itemproperty $FullRegKeyName -Name "UserName" -Value $username -Type STRING -Force -ErrorAction SilentlyContinue | Out-Null
 
 # Creates ScheduleTask
 Register-ScheduledTask -Xml (get-content $PSScriptRoot\autologon.xml | out-string) -TaskName "Autologon"
