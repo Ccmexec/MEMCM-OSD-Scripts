@@ -1,0 +1,32 @@
+{
+    "primaryOEMPins": [
+        {
+            "desktopAppLink": "%ALLUSERSPROFILE%\\Microsoft\\Windows\\Start Menu\\Programs\\Outlook.lnk"
+        },        
+		{
+            "desktopAppLink": "%ALLUSERSPROFILE%\\Microsoft\\Windows\\Start Menu\\Programs\\7-Zip\\7-Zip File Manager.lnk"
+        },
+		{
+            "desktopAppLink": "%ALLUSERSPROFILE%\\Microsoft\\Windows\\Start Menu\\Programs\\Microsoft Endpoint Manager\\Configuration Manager\\Software Center.lnk"
+        },
+        {
+            "packagedAppId": "Microsoft.WindowsTerminal_8wekyb3d8bbwe!App"
+        }
+    ],
+    "secondaryOEMPins": [
+		{
+            "packagedAppId": "Microsoft.WindowsCamera_8wekyb3d8bbwe!App"
+        },
+		{
+            "packagedAppId": "Microsoft.WindowsSoundRecorder_8wekyb3d8bbwe!App"
+        },
+		{
+            "packagedAppId": "Microsoft.SecHealthUI_8wekyb3d8bbwe!SecHealthUI"
+        }		
+    ],
+    "firstRunOEMPins": [ 
+        {
+            "packagedAppId": "Microsoft.MicrosoftStickyNotes_8wekyb3d8bbwe!App"
+        }
+	]
+}
