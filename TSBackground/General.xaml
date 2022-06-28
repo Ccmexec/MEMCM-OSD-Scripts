@@ -1,0 +1,42 @@
+    <Grid Name="General" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" Visibility="Hidden">
+			
+			<Grid VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0, 0, 0, 280" Width="auto" MinWidth="400" Visibility="Visible">
+				<TextBlock Height="40" VerticalAlignment="Center" HorizontalAlignment="Center" Text="{Binding [_SMSTSOrgName]}" FontSize="22" FontWeight="Bold" Foreground="LightSkyBlue"/>
+			</Grid>
+			
+            <Grid VerticalAlignment="Center" HorizontalAlignment="Left" Margin="30, 80, 15, 0" Width="300" Visibility="Visible">
+                <StackPanel>
+                    <TextBlock Padding="5,5,5,5" Height="28" VerticalAlignment="Center" HorizontalAlignment="Left" Text="{Binding [_SMSTSMachineName]}" FontSize="14" FontWeight="Bold" Foreground="LightSkyBlue"/>
+                    <TextBlock Padding="5,5,5,5" Height="24" VerticalAlignment="Center" HorizontalAlignment="Left" Text="Management point" FontSize="12" FontWeight="Bold" Foreground="DeepSkyBlue"/>
+                    <TextBlock Padding="5,2,5,5" Height="20" VerticalAlignment="Center" HorizontalAlignment="Left" Text="{Binding [_SMSTSMP]}" FontSize="10" FontWeight="Normal" Foreground="LightSkyBlue"/>
+                    <TextBlock Padding="5,5,5,5" Height="24" VerticalAlignment="Center" HorizontalAlignment="Left" Text="Distribution point(s)" FontSize="12" FontWeight="Bold" Foreground="DeepSkyBlue"/>
+                    <TextBlock Padding="5,2,5,5" Height="20" VerticalAlignment="Center" HorizontalAlignment="Left" Text="{Binding [OSDDPS]}" FontSize="10" FontWeight="Normal" Foreground="LightSkyBlue"/>
+                    <TextBlock Padding="5,5,5,5" Height="24" VerticalAlignment="Center" HorizontalAlignment="Left" Text="Last used content location" FontSize="12" FontWeight="Bold" Foreground="DeepSkyBlue"/>
+                    <TextBlock Padding="5,2,5,5" Height="20" VerticalAlignment="Center" HorizontalAlignment="Left" Text="{Binding [_SMSTSLastContentDownloadLocation]}" FontSize="10" FontWeight="Normal" Foreground="LightSkyBlue"/>
+                    <TextBlock Padding="5,5,5,5" Height="24" VerticalAlignment="Center" HorizontalAlignment="Left" Text="Networking" FontSize="12" FontWeight="Bold" Foreground="DeepSkyBlue"/>
+                    <TextBlock Padding="5,2,5,5" Height="20" VerticalAlignment="Center" HorizontalAlignment="Left" Text="{Binding [TSBIpAddress]}" FontSize="10" FontWeight="Normal" Foreground="LightSkyBlue"/>
+                    <TextBlock Padding="5,2,5,5" Height="20" VerticalAlignment="Center" HorizontalAlignment="Left" Text="{Binding [TSBMacAddress]}" FontSize="10" FontWeight="Normal" Foreground="LightSkyBlue"/>
+                    <TextBlock Padding="5,2,5,5" Height="20" VerticalAlignment="Center" HorizontalAlignment="Left" Text="{Binding [_SMSTSSmbiosGuid]}" FontSize="10" FontWeight="Normal" Foreground="LightSkyBlue"/>
+
+                    <TextBlock Padding="5,5,5,5" Height="24" VerticalAlignment="Center" HorizontalAlignment="Left" Text="Start time" FontSize="12" FontWeight="Bold" Foreground="DeepSkyBlue"/>
+                    <TextBlock Padding="5,2,5,5" Height="20" VerticalAlignment="Center" HorizontalAlignment="Left" Text="{Binding [TSBStartTime]}" FontSize="10" FontWeight="Normal" Foreground="LightSkyBlue"/>
+
+                    <TextBlock Padding="5,5,5,5" Height="24" VerticalAlignment="Center" HorizontalAlignment="Left" Text="Elapsed time" FontSize="12" FontWeight="Bold" Foreground="DeepSkyBlue"/>
+                    <TextBlock Padding="5,2,5,5" Height="20" VerticalAlignment="Center" HorizontalAlignment="Left" Text="{Binding [TSBElapsedTime]}" FontSize="10" FontWeight="Normal" Foreground="LightSkyBlue"/>
+                </StackPanel>
+            </Grid>
+
+        <Grid VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0, 0, 0, 10" Width="auto" MinWidth="400" Visibility="Visible">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+            </Grid.RowDefinitions>
+
+            <StackPanel Orientation="Horizontal" Grid.Row="1" HorizontalAlignment="Center">
+                <TextBlock Padding="0,5,5,5" Height="30" VerticalAlignment="Center" HorizontalAlignment="Center" Text="Step:" FontSize="12" FontWeight="Normal" Foreground="LightSkyBlue"/>
+                <TextBlock Padding="0,5,5,5" Height="30" VerticalAlignment="Center" HorizontalAlignment="Center" Text="{Binding [TSBCurrentAction]}" FontSize="12" FontWeight="Normal" Foreground="LightSkyBlue"/>
+                <TextBlock Padding="0,5,5,5" Height="30" VerticalAlignment="Center" HorizontalAlignment="Center" Text="of" FontSize="12" FontWeight="Normal" Foreground="LightSkyBlue"/>
+                <TextBlock Padding="0,5,5,5" Height="30" VerticalAlignment="Center" HorizontalAlignment="Center" Text="{Binding [TSBFinalAction]}" FontSize="12" FontWeight="Normal" Foreground="LightSkyBlue"/>
+            </StackPanel>
+        </Grid>
+    </Grid>
